@@ -6,18 +6,18 @@
   </head>
   <body>
     <h1>Hello World!</h1>
-    <p>My name is Matthew.</p>
+    <p>My name is Matthew and I would like to play a game.</p>
     <script>
     var userName = prompt("Hello, Whats your name?");
     alert("Hi " + userName + ". Nice to meet you.  I am going to ask you a few questions about me and I want you to try and guess the correct answer.  At the end, I will let you know how many questions you got right.");
     console.log('This is the userName variable: ' + userName);
     var correctAnswers = 0
-    var questionOne = prompt("Question 1:  Was I borin in Washington?");
+    var questionOne = prompt("Question 1:  Was I born in in Washington?");
     console.log('This is the answer to the first question : ' + questionOne);
     if (questionOne == 'yes') {
-      alert("Sorry, I was not born in Washington.  I was born in Texas!");
+      alert("Sorry " + userName + ", I was not born in Washington.  I was born in Texas!");
     } else if (questionOne == 'no') {
-      alert("Correct!,  I was not born in Washington, I was born in Texas");
+      alert("Correct " + userName + "!,  I was not born in Washington, I was born in Texas");
       correctAnswers += 1;
     } else {
       alert("It doesnt look like your answered 'yes' or 'no' so technically you are wrong!");
@@ -25,15 +25,15 @@
     var  questionTwo = prompt("Question 2: Do I like Coffee or Tea more?");
     console.log('This is the answer to the first question : ' + questionTwo);
     if (questionTwo == "coffee") {
-      alert("Correct!  I love me some coffee");
+      alert("Correct "  + userName + "!  I love me some coffee");
       correctAnswers += 1;
     } else {
-      alert("Sorry that is incorrect.  I love coffe much more than " + questionTwo + ".");
+      alert("Sorry "  + userName + " that is incorrect.  I love coffe much more than " + questionTwo + ".");
     }
     var questionThree = prompt("I have a pet named 'Penny'.  Is she a cat or dog?")
     console.log('This is the answer to the first question : ' + questionThree);
     if (questionThree == 'dog') {
-      alert("Correct!  Penny is my dog and I love her!")
+      alert("Correct "  + userName + "!  Penny is my dog and I love her!")
       correctAnswers += 1;
     } else {
       alert("Nope.  Penny is not a " + questionThree + ".  She is a dog!")
@@ -46,7 +46,7 @@
     } else if (num1 > 26) {
       alert('Sorry, you guessed too high!  I am 26');
     } else if (num1 === 26)  {
-      alert("Holy smokes!  Good quess.  I am indeed 26");
+      alert("Holy smokes!  Good guess.  I am indeed 26");
       correctAnswers += 1;
     } else {
       alert("Doesnt look like you guessed a number!")
@@ -57,6 +57,7 @@
 
 
     </script>
+    <img src="http://www.bigbadtoystore.com/images/products/aux1/large/MED10085.jpg"/>
   <h3>Thanks for playing!</h3>
   </body>
 </html>
