@@ -1,18 +1,25 @@
+
+
 var userName = prompt("Hello, Whats your name?");
 setTimeout(alert("Hi " + userName + ". Nice to meet you.  I am going to ask you a few questions about me and I want you to try and guess the correct answer.  At the end, I will let you know how many questions you got right."), 10000);
 console.log('This is the userName variable: ' + userName);
+
+//Correct Answer Counter
 var correctAnswers = 0
-var questionOne = prompt("Question 1:  Was I born in in Washington?");
+
+//First Question
+var questionOne = prompt("Question 1:  Was I born in in Washington?").toUpperCase();
 console.log('This is the answer to the first question : ' + questionOne);
-if (questionOne == 'yes') {
+if (questionOne == 'YES') {
   alert("Sorry " + userName + ", I was not born in Washington.  I was born in Texas!");
-} else if (questionOne == 'no') {
+} else if (questionOne == 'NO') {
   alert("Correct " + userName + "!  I was not born in Washington, I was born in Texas");
   correctAnswers += 1;
 } else {
   alert("It doesnt look like your answered 'yes' or 'no' so technically you are wrong!");
 }
-var  questionTwo = prompt("Question 2: Do I like Coffee or Tea more?");
+//Second Question
+var  questionTwo = prompt("Question 2: Do I like Coffee or Tea more?").toLowerCase();
 console.log('This is the answer to the first question : ' + questionTwo);
 if (questionTwo == "coffee") {
   alert("Correct "  + userName + "!  I love me some coffee");
@@ -20,14 +27,16 @@ if (questionTwo == "coffee") {
 } else {
   alert("Sorry "  + userName + " that is incorrect.  I love coffee much more than " + questionTwo + ".");
 }
-var questionThree = prompt("I have a pet named 'Penny'.  Is she a cat or dog?")
+//Third Question
+var questionThree = prompt("I have a pet named 'Penny'.  Is she a cat or dog?").toLowerCase();
 console.log('This is the answer to the first question : ' + questionThree);
 if (questionThree == 'dog') {
-  alert("Correct "  + userName + "!  Penny is my dog and I love her!")
+  alert("Correct "  + userName + "!  Penny is my dog and I love her!");
   correctAnswers += 1;
 } else {
-  alert("Nope.  Penny is not a " + questionThree + ".  She is a dog!")
+  alert("Nope.  Penny is not a " + questionThree + ".  She is a dog!");
 }
+//Fourth Question
 var questionFour = prompt("How old am I?");
 console.log("the 'parseInt' function is used to turn the string answer to 'questionFour' to an integer");
 var num1 = parseInt(questionFour);
@@ -39,8 +48,19 @@ if (num1 < 26) {
   alert("Holy smokes!  Good guess.  I am indeed 26");
   correctAnswers += 1;
 } else {
-  alert("Doesnt look like you guessed a number!")
+  alert("Doesnt look like you guessed a number!");
 }
-
+//Bonus Question!!
 
 alert("You got " + correctAnswers + " out of 4 questions correct!");
+var bonusGuess = 0;
+var bonusNum = 3;
+var bonusQuestion = prompt("Time for a bonus question!  I am thinking of a number between 1 and 10.  What's my number?  Continue guessing until you get it!");
+var questionNum = parseInt(bonusQuestion);
+
+while (questionNum !== 3) {
+  questionNum = parseInt(prompt("Guess Again!"));
+  bonusGuess += 1;
+
+}
+alert("Great job!  You got it right!  It took you " + bonusGuess + " tries to guess my number.")
