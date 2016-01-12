@@ -63,4 +63,5 @@ while (questionNum !== 3) {
   bonusGuess += 1;
 
 }
-alert("Great job!  You got it right!  It took you " + bonusGuess + " tries to guess my number.")
+//Alert letting the user know how many guesses it took them to guess the number I was thinking of.
+alert("Great job!  You got it right!  It took you " + bonusGuess + " tries to guess my number.");
