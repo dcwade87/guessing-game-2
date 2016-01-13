@@ -1,7 +1,7 @@
 
 
 var userName = prompt("Hello, Whats your name?");
-setTimeout(alert("Hi " + userName + ". Nice to meet you.  I am going to ask you a few questions about me and I want you to try and guess the correct answer.  At the end, I will let you know how many questions you got right."), 10000);
+alert("Hi " + userName + ". Nice to meet you.  I am going to ask you a few questions about me and I want you to try and guess the correct answer.  At the end, I will let you know how many questions you got right.");
 console.log('This is the userName variable: ' + userName);
 
 //Correct Answer Counter
@@ -28,7 +28,7 @@ if (questionTwo == "coffee") {
   alert("Sorry "  + userName + " that is incorrect.  I love coffee much more than " + questionTwo + ".");
 }
 //Third Question
-var questionThree = prompt("I have a pet named 'Penny'.  Is she a cat or dog?").toLowerCase();
+var questionThree = prompt("Question 3: I have a pet named 'Penny'.  Is she a cat or dog?").toLowerCase();
 console.log('This is the answer to the first question : ' + questionThree);
 if (questionThree == 'dog') {
   alert("Correct "  + userName + "!  Penny is my dog and I love her!");
@@ -37,7 +37,7 @@ if (questionThree == 'dog') {
   alert("Nope.  Penny is not a " + questionThree + ".  She is a dog!");
 }
 //Fourth Question
-var questionFour = prompt("How old am I?");
+var questionFour = prompt("Question 4: How old am I?");
 console.log("the 'parseInt' function is used to turn the string answer to 'questionFour' to an integer");
 var num1 = parseInt(questionFour);
 if (num1 < 26) {
@@ -53,11 +53,12 @@ if (num1 < 26) {
 //Bonus Question!!
 
 alert("You got " + correctAnswers + " out of 4 questions correct!");
-var bonusGuess = 0;
-var bonusNum = 3;
+var bonusGuess = 0; //Counter for bonus question attempts
+var bonusNum = 3; //Number for user to guess
 var bonusQuestion = prompt("Time for a bonus question!  I am thinking of a number between 1 and 10.  What's my number?  Continue guessing until you get it!");
-var questionNum = parseInt(bonusQuestion);
+var questionNum = parseInt(bonusQuestion); //Takes the string entered by user and changes it to an integer and stores it in the questionNum  variable
 
+//Loop for bonus question
 while (questionNum !== 3) {
   questionNum = parseInt(prompt("Guess Again!"));
   bonusGuess += 1;
