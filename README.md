@@ -7,8 +7,10 @@ The goal of this assignment is to:
   - Recognize and acknowledge answers by incorporating them into follow-up response
   - Record how many questions the user has answered right/wrong
   - Use a loop to prompt the user to guess the correct number and then display how many times it took the user to guess the correct answer
+  - Makes use of functions to reduce the code length
 
 ### Resources used
 [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/)  
+[**Lillian Szugyi**](https://github.com/lillianszugyi) assisted in development.
 
 ### Created by Matthew Sheridan-Smith
