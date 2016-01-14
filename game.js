@@ -1,40 +1,33 @@
-//
-//
 
-var counter = 0;
-var questions = ["Question 1:  Was I born in in Washington?", "Question 2: Do I like Coffee or Tea more?", "Question 3: I have a pet named 'Penny'.  Is she a cat or dog?", "Question 4: How old am I?"];
-var answers = ['no', 'coffee', 'dog', '26'];
+
 
 var userName = prompt("Hello, Whats your name?");
-alert("Hi " + userName + ". Nice to meet you.  I am going to ask you a few questions about me and I want you to try and guess the correct answer.  At the end, I will let you know how many questions you got right.");
+document.write("Hi " + userName + ". Nice to meet you.  I am going to ask you a few questions about me and I want you to try and guess the correct answer.  At the end, I will let you know how many questions you got right.");
 console.log('This is the userName variable: ' + userName);
 
-function game(x, y, z) {
-  var ques = prompt(questions[i]).toLowerCase();
-  if (ques === answers[i]){
-    document.write("You got it right!");
-    counter++;
-  } else {
-      document.write('Sorry, you are wrong');
-    }
+//Correct Answer Counter
+var correctAnswers = 0
+var questions = ["Question 1:  Was I born in in Washington?", "Question 2: Do I like Coffee or Tea more?", "Question 3: I have a pet named 'Penny'.  Is she a cat or dog?", "Question 4: How old am I?"];
+var answers = ["yes", "coffee", "dog", 26];
+
+var userAnswer = document.getElementById('a1');
+
+function game(x, y) {
+ var ques = prompt(x).toLowerCase();
+ if (ques === y){
+   userAnswer.innerHTML = "You got it right!";
+   counter++;
+ } else {
+     userAnswer.innerHTML = "Sorry, you are wrong.";
+   }
 
 }
 
 for (var i = 0; i < questions.length; i += 1) {
-  game(questions[i], answers[i]);
+ game(questions[i], answers[i]);
 
 }
 
-document.write("You got " + counter + " questions right!");
-
-// var ans1 = document.getElementById('a1')
-
-
-
-
-// //Correct Answer Counter
-// var correctAnswers = 0;
-//
 // //First Question
 // var questionOne = prompt("Question 1:  Was I born in in Washington?").toUpperCase();
 // console.log('This is the answer to the first question : ' + questionOne);
@@ -80,17 +73,17 @@ document.write("You got " + counter + " questions right!");
 // }
 // //Bonus Question!!
 //
-alert("You got " + correctAnswers + " out of 4 questions correct!");
-var bonusGuess = 0; //Counter for bonus question attempts
-var bonusNum = 3; //Number for user to guess
-var bonusQuestion = prompt("Time for a bonus question!  I am thinking of a number between 1 and 10.  What's my number?  Continue guessing until you get it!");
-var questionNum = parseInt(bonusQuestion); //Takes the string entered by user and changes it to an integer and stores it in the questionNum  variable
-
-//Loop for bonus question
-while (questionNum !== 3) {
-  questionNum = parseInt(prompt("Guess Again!"));
-  bonusGuess += 1;
-
-}
-//Alert letting the user know how many guesses it took them to guess the number I was thinking of.
-alert("Great job!  You got it right!  It took you " + bonusGuess + " tries to guess my number.");
+// alert("You got " + correctAnswers + " out of 4 questions correct!");
+// var bonusGuess = 0; //Counter for bonus question attempts
+// var bonusNum = 3; //Number for user to guess
+// var bonusQuestion = prompt("Time for a bonus question!  I am thinking of a number between 1 and 10.  What's my number?  Continue guessing until you get it!");
+// var questionNum = parseInt(bonusQuestion); //Takes the string entered by user and changes it to an integer and stores it in the questionNum  variable
+//
+// //Loop for bonus question
+// while (questionNum !== 3) {
+//   questionNum = parseInt(prompt("Guess Again!"));
+//   bonusGuess += 1;
+//
+// }
+// //Alert letting the user know how many guesses it took them to guess the number I was thinking of.
+// alert("Great job!  You got it right!  It took you " + bonusGuess + " tries to guess my number.");
