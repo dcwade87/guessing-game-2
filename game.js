@@ -12,11 +12,11 @@ var answers = ["yes", "coffee", "dog", 26];
 
 var userAnswer = document.getElementById('a1');
 
-function game(x, y) {
- var ques = prompt(x).toLowerCase();
- if (ques === y){
+function game(questions, answers) {
+ var ques = prompt(questions).toLowerCase();
+ if (ques === answers || parseInt(ques) === answers) {
    userAnswer.innerHTML = "You got it right!";
-   counter++;
+   correctAnswers++;
  } else {
      userAnswer.innerHTML = "Sorry, you are wrong.";
    }
