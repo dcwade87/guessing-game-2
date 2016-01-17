@@ -10,8 +10,8 @@ The goal of this assignment is to:
   - Makes use of functions to reduce the code length
 
 ### Resources used
-[**Mozilla Developer Network**](https://developer.mozilla.org/en-US/)  
-[**Adobe CC**](https://color.adobe.com/create/color-wheel/)
-[**Lillian Szugyi**](https://github.com/lillianszugyi) assisted in development.
-[**Andrew Watson**](https://github.com/andrewpeterwatson) assisted in development.
+- [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/)  
+- [**Adobe CC**](https://color.adobe.com/create/color-wheel/)
+- [**Lillian Szugyi**](https://github.com/lillianszugyi) assisted in development.
+- [**Andrew Watson**](https://github.com/andrewpeterwatson) assisted in development.
 ### Created by Matthew Sheridan-Smith
