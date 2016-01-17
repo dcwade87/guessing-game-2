@@ -2,18 +2,21 @@
 
 
 var userName = prompt("Hello, Whats your name?");
-document.write("Hi " + userName + ". Nice to meet you.  I am going to ask you a few questions about me and I want you to try and guess the correct answer.  At the end, I will let you know how many questions you got right.");
+var greetings = document.getElementById('greetings');
+greetings.innerHTML= "Hi " + userName + ". Nice to meet you.  I am going to ask you a few questions about me and I want you to try and guess the correct answer.  At the end, I will let you know how many questions you got right.";
+
 console.log('This is the userName variable: ' + userName);
 
-//Correct Answer Counter
-var correctAnswers = 0
+
+var correctAnswers = 0; //Correct Answer Counter
 var questions = ["Question 1:  Was I born in in Washington?", "Question 2: Do I like Coffee or Tea more?", "Question 3: I have a pet named 'Penny'.  Is she a cat or dog?", "Question 4: How old am I?"];
-var answers = ["yes", "coffee", "dog", 26];
+var answers = ["no", "coffee", "dog", 26];
 
-var userAnswer = document.getElementById('a1');
-
+var userAnswer = document.getElementById('a2');
+var firstQuestion = document.getElementById('a1')
 function game(questions, answers) {
  var ques = prompt(questions).toLowerCase();
+firstQuestion.innerHTML= questions;
  if (ques === answers || parseInt(ques) === answers) {
    userAnswer.innerHTML = "You got it right!";
    correctAnswers++;
@@ -27,6 +30,8 @@ for (var i = 0; i < questions.length; i += 1) {
  game(questions[i], answers[i]);
 
 }
+var correctRight = document.getElementById('correctRight');
+correctRight.innerHTML= 'You got ' + correctAnswers + ' questions right!';
 
 // //First Question
 // var questionOne = prompt("Question 1:  Was I born in in Washington?").toUpperCase();
