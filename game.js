@@ -11,10 +11,12 @@ console.log('This is the userName variable: ' + userName);
 var correctAnswers = 0; //Correct Answer Counter
 var questions = ["Question 1:  Was I born in in Washington?", "Question 2: Do I like Coffee or Tea more?", "Question 3: I have a pet named 'Penny'.  Is she a cat or dog?", "Question 4: How old am I?"];
 var answers = ["no", "coffee", "dog", 26];
+var userResponse = []
 
+var ur = document.getElementById('ur');
 var userAnswer = document.getElementById('a2');
-var firstQuestion = document.getElementById('a1')
-function game(questions, answers) {
+var firstQuestion = document.getElementById('a1');
+function game(questions, answers, response) {
  var ques = prompt(questions).toLowerCase();
 firstQuestion.innerHTML= questions;
  if (ques === answers || parseInt(ques) === answers) {
@@ -23,11 +25,12 @@ firstQuestion.innerHTML= questions;
  } else {
      userAnswer.innerHTML = "Sorry, you are wrong.";
    }
-
+   userResponse.unshift(ques);
+   ur.innerHTML = "Your answer was " + ques;
 }
 
 for (var i = 0; i < questions.length; i += 1) {
- game(questions[i], answers[i]);
+ game(questions[i], answers[i], userResponse[i]);
 
 }
 var correctRight = document.getElementById('correctRight');
