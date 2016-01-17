@@ -1,4 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
 body {
-  background-color: #FFEA9F;
+  background-color: #99CAE8;
+  font-family: monospace;
   font-size: 48px;
+}
+footer {
+  background-color: #D4C5E8;
+  font-size: 15px;
+}
+.closing {
+  font-size: 28px;
+  font-style: oblique;
+  font-weight: bold;
 }
